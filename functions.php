@@ -1,9 +1,11 @@
 <?php
+
 /**
  * @package BuddyBoss Child
  * The parent theme functions are located at /buddyboss-theme/inc/theme/functions.php
  * Add your own functions at the bottom of this file.
  */
+
 
 
 /****************************** THEME SETUP ******************************/
@@ -21,14 +23,14 @@ function buddyboss_theme_child_languages()
    */
 
   // Translate text from the PARENT theme.
-  load_theme_textdomain( 'buddyboss-theme', get_stylesheet_directory() . '/languages' );
+  load_theme_textdomain('buddyboss-theme', get_stylesheet_directory() . '/languages');
 
   // Translate text from the CHILD theme only.
   // Change 'buddyboss-theme' instances in all child theme files to 'buddyboss-theme-child'.
   // load_theme_textdomain( 'buddyboss-theme-child', get_stylesheet_directory() . '/languages' );
 
 }
-add_action( 'after_setup_theme', 'buddyboss_theme_child_languages' );
+add_action('after_setup_theme', 'buddyboss_theme_child_languages');
 
 /**
  * Enqueues scripts and styles for child theme front-end.
@@ -47,18 +49,14 @@ function buddyboss_theme_child_scripts_styles()
    **/
 
   // Styles
-  wp_enqueue_style( 'buddyboss-child-css', get_stylesheet_directory_uri().'/assets/css/custom.css', '', '1.0.0' );
+  wp_enqueue_style('buddyboss-child-css', get_stylesheet_directory_uri() . '/assets/css/custom.css', '', '1.0.0');
 
   // Javascript
-  wp_enqueue_script( 'buddyboss-child-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.0.0' );
+  wp_enqueue_script('buddyboss-child-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', '', '1.0.0');
 }
-add_action( 'wp_enqueue_scripts', 'buddyboss_theme_child_scripts_styles', 9999 );
+add_action('wp_enqueue_scripts', 'buddyboss_theme_child_scripts_styles', 9999);
 
 
 /****************************** CUSTOM FUNCTIONS ******************************/
 
 // Add your own custom functions here
-
-
-
-?>
